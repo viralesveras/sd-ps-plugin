@@ -1,15 +1,19 @@
 {
   "id": "8a9aeca1",
   "name": "sd-ps-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.html",
+  "data": {
+    "addToPluginMenu": true,
+    "loadEvent": "startup"
+  },
   "host": [
     {
       "app": "PS",
       "minVersion": "22.0.0"
     }
   ],
-  "manifestVersion": 4,
+  "manifestVersion": 5,
   "entrypoints": [
     {
       "type": "panel",
@@ -65,7 +69,7 @@
         }
       ],
       "label": {
-        "default": "sd-ps-plugin"
+        "default": "Diffusion"
       }
     }
   ],
@@ -97,5 +101,13 @@
         "light"
       ]
     }
-  ]
+  ],
+  "requiredPermissions": {
+    "network": {
+      "domains": "all"
+    },
+    "clipboard": "readAndWrite",
+    "localFileSystem": "fullAccess",
+    "launchProcess": "request" 
+  }
 }
